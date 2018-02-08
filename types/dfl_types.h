@@ -1,9 +1,10 @@
 typedef enum {
-     dfl_nil = 0,
-     dfl_int64 = 1,
-     dfl_double = 2,
-     dfl_string = 3,
-} dfl_type;
+     dfl_bool,
+     dfl_int64,
+     dfl_double,
+     dfl_string,
+     dfl_basic_type_MAX = dfl_string
+} dfl_basic_type;
 
-const dfl_ntypes = 4;
+
 
