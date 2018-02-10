@@ -1,3 +1,5 @@
+#include <unistr.h>
+
 int dfl_int64_cmp(void const *a, void const *b) {
      return (*(int64*)a) - (*(int64*)b);
 }
@@ -14,9 +16,9 @@ int dfl_double_cmp(void const *a, void const *b) {
 }
 
 int dfl_string_cmp(void const *a, void const *b) {
-     char * as = *a;
-     char * bs = *b;
-     return strcmp(as, bs);
+     dfl_string * as = *a;
+     dfl_string * bs = *b;
+     return u8_cmp2(as -> data, as -> len, bs -> data, bs -> len);
 }
 
 int not_implemented_int_2const(void const *a, void const *b) {

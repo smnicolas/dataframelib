@@ -17,7 +17,7 @@ dfl_series *dfl_series_alloc (size_t size, size_t stride, size_t capacity) {
      }
      dfl_block * block;
      dfl_series * s = malloc ( sizeof (dfl_series));
-     if (b == 0) {
+     if (s == 0) {
           free (b);
           fprintf(stderr,
                   "dfl_series_alloc: error con malloc\n");
