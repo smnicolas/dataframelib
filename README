@@ -1,3 +1,7 @@
 dataframelib
 
 data frame library in c
+
+para compilar $FILE, usar:
+
+gcc $FILE -I$HOME/include -L$HOME/lib -l dfl -lunistring

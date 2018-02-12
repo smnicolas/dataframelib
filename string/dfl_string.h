@@ -1,5 +1,8 @@
 #ifndef __DFL_STRING_H__
 #define __DFL_STRING_H__
+#include <stdio.h>
+#include <stdint.h>
+#include <dfl/dfl_block.h>
 
 typedef struct {
      size_t len;

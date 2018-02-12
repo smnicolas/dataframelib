@@ -9,13 +9,13 @@ dfl_string *dfl_string_alloc (size_t size, size_t capacity) {
      dfl_block * block;
      dfl_string * s = malloc ( sizeof (dfl_string));
      if (s == 0) {
-          free (b);
+          free (s);
           fprintf(stderr,
                   "dfl_string_alloc: error con malloc\n");
                   abort ();
      }
 
-     block = gsl_block_alloc (capacity);
+     block = dfl_block_alloc (capacity);
 
      if (block == 0) {
           free (block);

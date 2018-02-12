@@ -18,7 +18,7 @@ dfl_series *dfl_series_alloc (size_t size, size_t stride, size_t capacity) {
      dfl_block * block;
      dfl_series * s = malloc ( sizeof (dfl_series));
      if (s == 0) {
-          free (b);
+          free (s);
           fprintf(stderr,
                   "dfl_series_alloc: error con malloc\n");
                   abort ();
@@ -29,7 +29,7 @@ dfl_series *dfl_series_alloc (size_t size, size_t stride, size_t capacity) {
                   "dfl_series_alloc: overflow stride * capacity\n");
           abort ();
      }
-     block = gsl_block_alloc (nbytes);
+     block = dfl_block_alloc (nbytes);
 
      if (block == 0) {
           free (block);

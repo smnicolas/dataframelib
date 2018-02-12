@@ -1,6 +1,6 @@
 #ifndef __DFL_SERIES_H__
 #define __DFL_SERIES_H__
-
+#include <stdio.h>
 #include <dfl/dfl_block.h>
 
 typedef struct {

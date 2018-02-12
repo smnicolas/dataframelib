@@ -1,5 +1,6 @@
 #ifndef __DFL_BLOCK_H__
 #define __DFL_BLOCK_H__
+#include <stdlib.h>
 
 typedef struct {
      size_t size;
