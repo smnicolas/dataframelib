@@ -7,7 +7,7 @@ LD = $(CC)
 
 TARGET = libdfl.a
 
-OBJECTS = $(patsubst %.c, %.o, $(shell find . -name "*.c"))
+OBJECTS = $(patsubst %.c, %.o, $(shell find src -name "*.c"))
 
 all: $(TARGET)
 

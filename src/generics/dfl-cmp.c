@@ -4,6 +4,9 @@
 #include <dfl/dfl_types.h>
 #include <dfl/dfl_block.h>
 #include <dfl/dfl_string.h>
+#include <dfl/dfl_generics.h>
+static void dfl_cmp_func_array_constructor ()
+     __attribute__((constructor));
 
 int dfl_int64_cmp(void const *a, void const *b) {
      return (*(int64_t*)a) - (*(int64_t*)b);
@@ -45,3 +48,6 @@ void dfl_cmp_func_array_constructor () {
      dfl_cmp_func_array[dfl_type_string] = dfl_string_cmp;
 }
 
+int dfl_cmp (dfl_basic_type type, void const *a, void const *b) {
+     return dfl_cmp_func_array[type](a, b);
+}
