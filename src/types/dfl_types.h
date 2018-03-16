@@ -6,7 +6,8 @@ typedef enum {
      dfl_type_int64,
      dfl_type_double,
      dfl_type_string,
-     dfl_basic_types_MAX = dfl_type_string
+     dfl_type_cstring,
+     dfl_basic_types_MAX = dfl_type_cstring
 } dfl_basic_type;
 
 

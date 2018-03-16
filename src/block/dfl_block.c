@@ -21,3 +21,15 @@ dfl_block *dfl_block_alloc(const size_t size) {
      b -> size = size;
      return b;
 }
+
+void dfl_block_realloc_duplicate_size(dfl_block * b) {
+     size_t newsize = b -> size * 2;
+     void * newdata =  realloc (b -> data, newsize);
+     if (newdata == 0) {
+          fprintf (stderr, "failure reallocatting memory for block struct\n");
+          abort ();
+     }
+     
+     b -> data = newdata;
+     b -> size = newsize;
+}
