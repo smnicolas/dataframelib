@@ -58,10 +58,10 @@ void *dfl_series_min (dfl_series* s) {
      return min;
 }
 
-dfl_series* dfl_series_from_array_int64(int64_t * arr, int len) {
-     dfl_series s = dfl_series_alloc(dfl_type_int64, len, 4, len);
+dfl_series* dfl_series_from_array_int64(int64_t  arr[], int len) {
+     dfl_series *s = dfl_series_alloc(dfl_type_int64, len, len);
      for (int i = 0; i < len; i++) {
-          dfl_series_insert_tail_int64 (s, arr[i]);
+          dfl_series_insert_tail_int64 (s, arr + i);
      }
      return s;
 }
