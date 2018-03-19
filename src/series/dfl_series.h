@@ -13,8 +13,12 @@ typedef struct {
      int owner;
 } dfl_series;
 
-dfl_series *dfl_series_alloc (dfl_basic_type btype, size_t size, size_t stride, size_t capacity);
 
+
+dfl_series *dfl_series_alloc (dfl_basic_type btype,
+                              size_t size,
+                              size_t capacity);
+dfl_series *dfl_series_read(dfl_basic_type btype, FILE * f);
 void *dfl_series_min (dfl_series* s) ;
 
 #endif

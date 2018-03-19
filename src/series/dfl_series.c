@@ -5,19 +5,15 @@
 
 dfl_series *dfl_series_alloc (dfl_basic_type btype,
                               size_t size,
-                              size_t stride, size_t capacity) {
+                              size_t capacity) {
      if (capacity < size) {
           fprintf(stderr,
                   "dfl_series_alloc: error size < capacity\n");
           abort ();
           
      }
-     if (stride == 0) {
-          fprintf(stderr,
-                  "dfl_series_alloc: error stride == 0\n");
-          abort ();
 
-     }
+     size_t stride = dfl_type_size[btype];
      dfl_block * block;
      dfl_series * s = malloc ( sizeof (dfl_series));
      if (s == 0) {
@@ -69,3 +65,4 @@ dfl_series* dfl_series_from_array_int64(int64_t * arr, int len) {
      }
      return s;
 }
+

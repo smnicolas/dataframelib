@@ -10,5 +10,7 @@ typedef enum {
      dfl_basic_types_MAX = dfl_type_cstring
 } dfl_basic_type;
 
+extern size_t dfl_type_size[dfl_basic_types_MAX + 1];
+
 
 #endif
